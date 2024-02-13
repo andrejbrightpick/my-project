@@ -35,8 +35,3 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
-
-  publish:
-    runs-on: ubuntu-latest
-    needs: build # waits until build finishes
-
