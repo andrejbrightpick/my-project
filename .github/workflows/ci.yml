@@ -15,12 +15,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-#    runs-on: ${{matrix.os}}
-#    strategy:
-#      matrix:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
 #        os: [ubuntu-latest, windows-latest, macOS-latest]
+        include:
+          - os: ubuntu-20.04
+            repository: bp_devops_u20
+          - os: ubuntu-22.04
+            repository: bp_devops_u22
 
     steps:
     - uses: actions/checkout@v2
